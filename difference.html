@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function name(){
+            alert(document.getElementsByTagName("h1")[0].innerHtml="hy how u ");
+        }
+        window.addEventListener("load",function(){
+            alert(document.getElementsByTagName("h2")[0].innerHtml="hello world ");
+        });
+        document.addEventListener("DOMContentLoaded",function(){
+            alert(document.getElementsByTagName("h3")[0].innerHtml="namasthe ");
+        });
+    </script>
+</head>
+<body onload="name()">
+    <h1>hyyy how u </h1>
+    <h2>hello world</h2>
+    <h3>namaste</h3>
+</body>
+</html>
