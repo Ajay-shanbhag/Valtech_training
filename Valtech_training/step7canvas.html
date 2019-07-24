@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas{ 
+        border: 2px solid green;
+    margin: 30px auto;
+    display:block;}
+    </style>
+    <script>
+    var ctx;
+    document.addEventListener("DOMContentLoaded",function(){
+        ctx=document.querySelector("canvas").getContext("2d");
+        setInterval(function(){
+        var x=Math.round(Math.random()*500);
+        var y=Math.round(Math.random()*500);
+        var r=Math.round(Math.random()*100);
+        ctx.beginPath();
+        ctx.arc(x,y,r,0,(Math.PI/180)*360);
+        var r1=Math.round(Math.random()*225);
+        var g=Math.round(Math.random()*225);
+        var b=Math.round(Math.random()*225);
+        var a=Math.round(Math.random()*100);
+        ctx.fillStyle="rgba("+r1+","+g+","+b+","+a+")";
+        ctx.fill();
+        ctx.closePath();
+
+        },1000);
+          })
+    
+    </script>
+</head>
+<body>
+    <canvas width ="500px" height="500px"></canvas>
+</body>
+</html>

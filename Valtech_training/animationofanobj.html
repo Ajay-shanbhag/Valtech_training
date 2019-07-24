@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas Arcs</title>
+    <style>
+    canvas{
+        border: 1px solid gray;
+        margin-left: 350px;
+        margin-top:200px;
+        display: block;
+    }
+    </style>
+    <script>
+        var ctx,boxx=0;
+        document.addEventListener("DOMContentLoaded",function(){
+            ctx=document.querySelector("canvas").getContext("2d");
+                var img=new Image();
+                img.src="img/horse.jpg";
+                img.addEventListener("load",function(){
+                    setInterval(function(){
+                        ctx.drawImage(img,boxx,0);
+                        boxx-=200;
+                        if(boxx<-2200)
+                        boxx=0;
+                },60);
+            });
+        });
+    </script>     
+</head>
+<body>
+    <canvas width="200" height="134"></canvas>
+</body>
+</html>

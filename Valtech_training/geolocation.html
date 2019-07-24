@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload=function(){
+             if(navigator.geolocation)
+             {
+                // document.getElementById("log").innerHTML="geolocation works";
+                navigator.geolocation.getCurrentPosition(sucessFUnction,errorFunction);
+                
+                
+                }
+                 else{
+                 document.getElementById("log").innerHTML="geolocation does not work"
+                 }
+
+    };
+    function sucessFUnction(pos)
+    { 
+        console.log(pos);
+        document.getElementById("lat").innerHTML=pos.coords.latitude;
+        document.getElementById("lon").innerHTML=pos.coords.longitude;
+        document.getElementById("acc").innerHTML=pos.coords.accuracy;
+        document.getElementById("ts").innerHTML=new Date(pos.timestamp);
+    }
+    function errorFunction(error)
+    {
+     console.log(error);   
+    }
+    
+    </script>
+</head>
+<body>
+    <h1 >
+       MESSAGE: <output id="log"></output>
+       <br><br>
+       LONGITUDE: <output id="lon"></output>
+       <br><br>
+       LATITUDE: <output id="lat"></output>
+       <br><br>
+       ACCURACY: <output id="acc"></output>
+       <br><br>
+       TIME: <output id="ts"></output>
+       <img src=<iframe width="600" height="450" frameborder="0" style="border:0"
+       src="https://www.google.com/maps/embed/v1/undefined?origin=...&q=...&destination=...&center=...&zoom=...&key=..." allowfullscreen></iframe>
+    </h1>
+</body>
+</html>

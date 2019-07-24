@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 2px solid green;
+        }
+    </style>
+    <script> 
+    document.addEventListener("DOMContentLoaded",function(){
+    var can=document.getElementsByTagName("canvas")[0];
+    var ctx=can.getContext("2d");
+    ctx.font="bold 25px Arial";
+    
+    //ctx.scale(2,3);
+   // ctx.rotate((Math.PI/180)*45);
+    //ctx.translate(10,69);
+    //ctx.fillText("Valtech_",50,50);
+    /*var img=new Image();
+    img.src="img/cap.jpg";
+    img.addEventListener("load",function(){
+        ctx.drawImage(img,0,0);
+    })*/
+    /*ctx.moveTo(100,100); to draw a triangle
+    ctx.lineTo(200,100);
+    ctx.lineTo(150,150);
+    ctx.lineTo(100,100);
+    ctx.stroke();
+*/ 
+/*ctx.fillStyle="orange";// to fill a rectangle
+ctx.fillRect(15,65,50,50);
+ctx.lineWidth="5";//line width
+ctx.strokeStyle="rgba(0,0,255,0.5)";//color
+ctx.strokeRect(10,60,50,50);//transparent rect
+*/ 
+
+})
+
+    </script>
+</head>
+<body>
+    <canvas width="500px" height="500px">
+
+    </canvas>
+    
+</body>
+</html>

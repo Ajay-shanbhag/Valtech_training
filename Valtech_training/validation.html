@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <script>
+        //var uname,mail,password;
+      /*  window.addEventListener("load", function(){
+            document.getElementById("submitBtn").addEventListener("click", submitHandler)
+            document.getElementById("readBtn").addEventListener("click", readHandler)
+        });
+        function submitHandler(){
+            var nameip = document.getElementById("nameip");//to avoid the chances of getting slower thats y store it in a variable
+            var mailip = document.getElementById("mailip");
+            var passip = document.getElementById("passip");
+
+            uname = nameip.value;
+            mail = mailip.value;
+            password = passip.value;
+
+            nameip.value = "";
+            mailip.value = "";
+            passip.value = "";
+        }
+        function readHandler(){
+            document.getElementById("nameop").innerHTML = uname;
+            document.getElementById("mailop").innerHTML = mail;
+            document.getElementById("passop").innerHTML = password;
+        }*/
+        window.onload=function(){
+            document.getElementById("ageip").addEventListener("change",function(evt){
+                if(evt.target.value<18){
+                    evt.target.setCustomValidity("too young");
+
+                }
+                else if(evt.target.value>80)
+                {  evt.target.setCustomValidity("too old");}
+                else{
+                    evt.target.setCustomValidity("");
+                }
+
+            })
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method="GET">
+    <table align="center"border="2px">
+        <tr>
+            <td> Name : </td>
+            <td> 
+                <input id="nameip" name="uname" type="text" required>
+            </td>
+        </tr>
+        <tr>
+            <td> Age : </td>
+            <td> 
+                <input id="ageip" name="age" type="number" min="18" max="80">
+            </td>
+        </tr>
+        <tr>
+            <td> Phone : </td>
+            <td> 
+                <input id="phoneip" title="###-####-####" pattern="\d{3}-\d{4}-\d{4}"name="phone" type="text" >
+            </td>
+        </tr>
+        <tr>
+            <td> &nbsp; </td>
+            <td> 
+                <button id="submitBtn" type="submit">Login</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

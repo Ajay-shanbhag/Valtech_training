@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 2px solid red;
+        }
+    </style>
+   
+    <script>
+
+    var boxX = -50;
+    window.onload= function(){
+        var can = document.getElementsByTagName("canvas")[0];
+        var ctx = can.getContext("2d");  
+            ctx.fillRect(0,50,50,50); 
+
+            setInterval(function(){
+                boxX += 1;
+                ctx.clearRect(0,0,500,500);
+                if(boxX > 500){
+                    boxX = -50;
+                };
+                ctx.fillRect(boxX,50,50,50); 
+            },10) 
+     }
+    </script>
+     <!--[if lte IE 8]><script type="text/javascript" src="lib/excanvas.js"></script><![endif]-->
+
+</head>
+<body>
+    <canvas width="500" height="500"></canvas>
+</body>
+</html>
